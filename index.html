@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>turnitin Small Exercises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const delay = (ms) =>  new Promise(resolve => setTimeout(resolve, ms));
+        const animateRight = (el) => el.classList.toggle("button-moved");
+        const removeDuplicates = (xs) => [...new Set(xs)];
+    </script>
+    <style>
+        #button-move { transition: all 1s ease; }
+        .button-moved { margin-left: 100px; }
+    </style>
+</head>
+<body>
+<div class="p-8 font-thin leading-loose container mx-auto">
+    <div class="">
+        <h1 class="text-4xl">Welcome to Kevin's <span class="font-bold">turnitin</span> Small Coding Exercises</h1>
+        <div class="font-mono text-slate-400 pt-8 pl-8">
+            <div>// ms: number of milliseconds</div>
+            <div>// returns a Promise that is resolved after ms milliseconds</div>
+            <div>function delay(ms) {</div>
+            <div class="pl-8 text-black">
+                return new Promise(resolve => setTimeout(resolve, ms));
+            </div>
+            <div>}</div>
+            <div class="mt-4" ><button onclick="delay(1000).then(() => alert('Promised resolved 1000ms later.'))" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Try it for 1000ms</button></div>
+        </div>
+        <div class="font-mono text-slate-400 pt-8 pl-8">
+            <div>// el: element node object</div>
+            <div>// moves the element to the right by 100px over a duration of 1 second</div>
+            <div>function animateRight(el) {</div>
+            <div class="pl-8 text-black">
+                el.classList.toggle("button-moved");
+            </div>
+            <div>}</div>
+            <div class="mt-4"><button onclick="animateRight(document.getElementById('button-move'))" id="button-move" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Move this button</button></div>
+        </div>
+        <div class="font-mono text-slate-400 pt-8 pl-8">
+            <div>// xs: array</div>
+            <div>// returns: a new array, with unique items</div>
+            <div>function removeDuplicates(xs) {</div>
+            <div class="pl-8 text-black">
+                return [...new Set(xs)];
+            </div>
+            <div>}</div>
+            <div class="mt-4" ><button onclick="alert(removeDuplicates([1,3,4,7,3,4,2,8,6,7]))" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Clean this array [1,3,4,7,3,4,2,8,6,7]</button></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
