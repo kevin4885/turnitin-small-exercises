@@ -33,7 +33,7 @@
             <div>// moves the element to the right by 100px over a duration of 1 second</div>
             <div>function animateRight(el) {</div>
             <div class="pl-8 text-black">
-                el.classList.toggle("button-moved");
+                return el.classList.toggle("button-moved");
             </div>
             <div>}</div>
             <div class="mt-4"><button onclick="animateRight(document.getElementById('button-move'))" id="button-move" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Move this button</button></div>
